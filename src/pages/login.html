@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/main.css">
+    <script src="/src/js/data.js" defer></script>
+    <title>Autentisering</title>
+</head>
+
+<body>
+    <header id="scroll_function">
+        <section class="header-section">
+            <h2 class="logo" tabindex="0" onclick='window.location.href = "index.html"'></h2>
+        </section>
+        <button class="menuBtn open" id="open-menu">
+            <span class="menu-icon">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+            <span class="menu-text">Meny</span>
+        </button>
+        <nav id="nav-menu">
+            <button class="menuBtn close" id="close-menu">
+                <span class="menu-icon">
+                    <span class="bars cross1"></span>
+                    <span class="bars cross2"></span>
+                </span>
+                <span class="menu-text">stäng</span>
+            </button>
+            <ul>
+                <li class="links"><a href="/home">Startsida</a></li>
+                <li class="links"><a href="/src/pages/regist.html">signup</a></li>
+                <li class="links"><a href="#">login</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="backgroundImage"></div>
+        <div class="container">
+            <fieldset id="loginForm" class="login form">
+                <h2 class="header">Login</h2>
+                <form id="loginForm" method="post">
+                    <label for="e-postadress">Ange din username:</label>
+                    <input type="text" placeholder="Ange din e-postadress" id="e-postadress" name="username"
+                        autocomplete="username">
+                    <label for="password">Ange ditt lösenord:</label>
+                    <input type="password" id="password" placeholder="Ange ditt lösenord" name="password"
+                        autocomplete="current-password">
+                    <a href="#">Glömt ditt lösenord?</a>
+                    <label for="login" style="display: none;">login</label>
+                    <input type="submit" id="login" class="button" value="Login">
+                </form>
+                <!-- <section class="signup">
+            <h4 class="signup">Har du inget konto?</h4>
+            <p id="bli-medlem">Bli Medlem</p>
+        </section> -->
+            </fieldset>
+
+        </div>
+    </main>
+    <footer class="modify">
+        <h3 class="footer-head">Laborationsuppgift Autentisering och säkerhet för kursen DT207G , Backend-baserad
+            webbutveckling</h3>
+        <p class="footer-para">© Copyright Mohamed Abokashef, 2024</p>
+    </footer>
+</body>
+
+</html>

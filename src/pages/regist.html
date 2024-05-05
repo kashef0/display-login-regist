@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/main.css">
+    <script src="/src/js/data.js" type="module" defer></script>
+    <title>Autentisering</title>
+</head>
+
+<body>
+    <header id="scroll_function">
+        <section class="header-section">
+            <h2 class="logo" tabindex="0" onclick='window.location.href = "index.html"'></h2>
+        </section>
+        <button class="menuBtn open" id="open-menu">
+            <span class="menu-icon">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+            <span class="menu-text">Meny</span>
+        </button>
+        <nav id="nav-menu">
+            <button class="menuBtn close" id="close-menu">
+                <span class="menu-icon">
+                    <span class="bars cross1"></span>
+                    <span class="bars cross2"></span>
+                </span>
+                <span class="menu-text">stäng</span>
+            </button>
+            <ul>
+                <li class="links"><a href="/home">Startsida</a></li>
+                <li class="links"><a href="#">signup</a></li>
+                <li class="links"><a href="/src/pages/login.html">login</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="backgroundImage"></div>
+        <div class="container">
+            <fieldset id="registrationForm" class="registration form">
+                <h2 class="header">Bli Medlem</h2>
+                <form method="post" id="register-form">
+                    <label for="name">Ange ditt Namn:</label>
+                    <input type="text" id="name" name="username" placeholder="John Depp" autocomplete="name">
+                    <!-- <label for="adress">Ange din adress:</label>
+                    <input type="text" id="adress" placeholder="Dröttningsgatan 5" autocomplete="address-level1">
+                    <label for="tel">Ange din tel:</label>
+                    <input type="tel" id="tel" placeholder="076 233 456 3" autocomplete="tel"> -->
+                    <label for="e-mail">Ange din e-mail:</label>
+                    <input type="text" id="e-mail" name="email" placeholder="john.depp@example.com"
+                        autocomplete="username">
+                    <label for="passwords">Skapa ett lösenord:</label>
+                    <input type="password" name="password" id="passwords" placeholder="Skapa ett lösenord"
+                        autocomplete="new-password">
+                    <label for="password2">Bekräfta ditt lösenord:</label>
+                    <input type="password" name="password2" id="password2" placeholder="Bekräfta ditt lösenord"
+                        autocomplete="new-password">
+                    <label style="display: none;" for="Medlem">Bli Medlem</label>
+                    <input type="submit" id="Medlem" class="button" value="Bli Medlem">
+                </form>
+                <!-- <section class="signup">
+            <h4 class="signup">Har du redan ett konto?</h4>
+            <p id="loginKlick">Login</p>
+        </section> -->
+            </fieldset>
+        </div>
+    </main>
+    <footer class="modify">
+        <h3 class="footer-head">Laborationsuppgift Autentisering och säkerhet för kursen DT207G , Backend-baserad
+            webbutveckling</h3>
+        <p class="footer-para">© Copyright Mohamed Abokashef, 2024</p>
+    </footer>
+</body>
+
+</html>
