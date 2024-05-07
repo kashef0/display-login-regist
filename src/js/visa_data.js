@@ -3,7 +3,7 @@ const dataShow = document.getElementById("created_list");
 
 function visaData(rows) {
     dataShow.innerHTML = ""; 
-
+    document.getElementById("loadingMessage").style.display = "block";
     rows.forEach(element => {
         const rowId = element.id;
         dataShow.innerHTML += `
@@ -22,7 +22,7 @@ function visaData(rows) {
         `;
     });
 
-
+    document.getElementById("loadingMessage").style.display = "none";
 }
 
 

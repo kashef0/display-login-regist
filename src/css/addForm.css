@@ -134,3 +134,7 @@ h1 {
     color: red;
     
 }
+
+#loadingMessage {
+    font-size: 2em;
+}
