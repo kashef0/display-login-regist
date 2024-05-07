@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/main.css">
-    <script src="/src/js/data.js" defer></script>
+    <script src="/src/js/regist.js" type="module"></script>
     <title>Autentisering</title>
 </head>
 
@@ -32,9 +32,8 @@
                 <span class="menu-text">stäng</span>
             </button>
             <ul>
-                <li class="links"><a href="/home">Startsida</a></li>
-                <li class="links"><a href="/src/pages/regist.html">signup</a></li>
-                <li class="links"><a href="#">login</a></li>
+                <li class="links"><a class="action" href="#">signup</a></li>
+                <li class="links"><a href="/src/index.html">login</a></li>
 
             </ul>
         </nav>
@@ -42,25 +41,21 @@
     <main>
         <div class="backgroundImage"></div>
         <div class="container">
-            <fieldset id="loginForm" class="login form">
-                <h2 class="header">Login</h2>
-                <form id="loginForm" method="post">
-                    <label for="e-postadress">Ange din username:</label>
-                    <input type="text" placeholder="Ange din e-postadress" id="e-postadress" name="username"
+            <fieldset id="registrationForm" class="registration form">
+                <h2 class="header">Bli Medlem</h2>
+                <form method="post" id="register-form">
+                    <label for="name">Ange ditt Namn:</label>
+                    <input type="text" id="name" name="username" placeholder="John Depp" autocomplete="name">
+                    <label for="e-mail">Ange din e-mail:</label>
+                    <input type="email" id="e-mail" name="email" placeholder="john.depp@example.com"
                         autocomplete="username">
-                    <label for="password">Ange ditt lösenord:</label>
-                    <input type="password" id="password" placeholder="Ange ditt lösenord" name="password"
-                        autocomplete="current-password">
-                    <a href="#">Glömt ditt lösenord?</a>
-                    <label for="login" style="display: none;">login</label>
-                    <input type="submit" id="login" class="button" value="Login">
+                    <label for="passwords">Skapa ett lösenord:</label>
+                    <input type="password" name="password" id="passwords" placeholder="Skapa ett lösenord"
+                        autocomplete="new-password">
+                    <label style="display: none;" for="Medlem">Bli Medlem</label>
+                    <input type="submit" id="Medlem" class="button" value="Bli Medlem">
                 </form>
-                <!-- <section class="signup">
-            <h4 class="signup">Har du inget konto?</h4>
-            <p id="bli-medlem">Bli Medlem</p>
-        </section> -->
             </fieldset>
-
         </div>
     </main>
     <footer class="modify">

@@ -1,0 +1,43 @@
+main {
+    width: 100%;
+}
+
+#created_list {
+    width: 100%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2vw 1vw;
+}
+
+.unorderList {
+    width: 29.33%;
+    list-style: none;
+    padding: 10px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.del_BTN {
+    width: 33%;
+    cursor: pointer;
+    background-color: rgb(183, 174, 172);
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.del_BTN:hover {
+    background-color: #802D00;
+    color: white;
+    border-color: grey;
+    box-shadow: 6px 6px 8px grey;
+}

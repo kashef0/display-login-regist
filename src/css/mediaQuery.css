@@ -30,22 +30,35 @@
     }
 }
 
-@media only screen and (max-width: 992px) {
-    
-}
-
 @media screen and (max-width: 800px) {
-    
+    .container {
+        width: 80%;
+    }
 }
 
-@media screen and (max-width: 700px) {
-    
+@media screen and (max-width: 700px) { 
+    main #created_list .unorderList {
+        width: 48%;
+        flex-wrap: wrap;
+    }
+
+    .container {
+        width: 90%;
+
+        input[type=text], input[type=date] {
+            width: 90%;
+        }
+    }
 }
+
 
 @media only screen and (max-width: 500px) {
+    main {
+        height: auto;
+    }
     
-}
-
-@media only screen and (max-width: 300px) {
-    
+    main #created_list .unorderList {
+        width: 98%;
+        
+    }
 }
