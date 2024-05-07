@@ -28,7 +28,6 @@ export async function login_code(event) {
         
         localStorage.setItem('token', data.token);
         localStorage.setItem('username', username);
-        window.location.href = "/home.html"
         showProtectedContent();
         
 

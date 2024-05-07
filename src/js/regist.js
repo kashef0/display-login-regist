@@ -11,6 +11,14 @@ export async function regist_code(event) {
     const username = document.getElementById('name').value;
     const email = document.getElementById('e-mail').value;
     const password = document.getElementById('passwords').value;
+    
+    const error = document.getElementById("error-message");
+    if (password.length < 6) {
+        error.innerHTML = "Lösenordet måste vara minst 6 tecken långt";
+        return;
+    } else {
+        error.innerHTML = "";
+    }
 
     try {
         const response = await fetch(REGISTER_URL, {

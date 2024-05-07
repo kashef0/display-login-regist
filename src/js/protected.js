@@ -4,13 +4,18 @@ const PROTECTED_URL = `${API_URL}/protected`;
 
 // Visa skyddat innehåll om användaren är inloggad
 export function showProtectedContent() {
+    const messageEL = document.getElementById("skyddad");
     const username = localStorage.getItem('username');
-    if (username) {
-        // Use the username as needed
-        document.getElementById("test").innerHTML = `Welcome, ${username}!`;
+    const testEl = document.getElementById("test");
+   // kontrollera om 
+    if (testEl) {
+        testEl.innerHTML = `Välkomna :<span style="color:red"> ${username}</span>`;
+    } else {
+        console.error("Element med id 'test' finns inte");
     }
+
     const token = localStorage.getItem('token');
-    if (token) {
+    if (token && window.location.pathname !== "/home.html") {
         fetch(PROTECTED_URL, {
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -20,21 +25,18 @@ export function showProtectedContent() {
                 if (!response.ok) {
                     throw new Error('Access denied');
                 }
-                // window.location.href = "/src/index.html";
                 return response.text();
             })
             .then(data => {
-                document.getElementById("test").innerHTML = `Välkomna :<span style="color:red"> ${username}</span>`;
-                
-                // document.getElementById('protected-content').style.display = 'block';
-                // window.location.href = "/src/index.html"
+                window.location.href = "/home.html";
+                messageEL.style.display = "block";
             })
             .catch(error => {
                 console.error('Error accessing protected content:', error.message);
             });
     }
-}
 
+}
 
 window.addEventListener('load', showProtectedContent);
 
