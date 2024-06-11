@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css/addForm.css">
     <script src="/src/js/main_form.js" type="module"></script>
     <script src="/src/js/login.js" type="module"></script>
+    <script type="module">
+        import { showProtectedContent1 } from './js/protected.js';
+        console.log("test in html")
+        showProtectedContent1()
+    </script>
 </head>
 <body>
     <header id="scroll_function">
@@ -49,6 +54,7 @@
         </div>
     
         
+        <div id="new_data"></div>
         <div id="created_list"></div>
     </main>
     

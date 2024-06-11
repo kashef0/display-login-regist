@@ -7,7 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/addForm.css">
     <script src="/src/js/main_form.js" type="module"></script>
-    <title>Autentisering</title>
+    <script type="module">
+        import { showProtectedContent1, showProtectedContent  } from './js/protected.js';
+        console.log("test in html")
+        showProtectedContent1()
+        showProtectedContent();
+    </script>
+    <title>skyddad sida</title>
 </head>
 
 <body>
@@ -33,7 +39,7 @@
             </button>
             <ul>
                 <li class="links"><a class="action" href="#">Lägg till jobb</a></li>
-                <li class="links"><a href="/src/index.html" id="logoutBtn">logout</a></li>
+                <li class="links"><a href="#" id="logoutBtn">logout</a></li>
             </ul>
         </nav>
     </header>

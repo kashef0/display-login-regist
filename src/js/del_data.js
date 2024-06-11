@@ -5,10 +5,14 @@ async function deleteData(event) {
     const button = event.target;
     const rowId = button.dataset.rowId;                
     const rowEl = document.getElementById(`row-${rowId}`);
+    const token = localStorage.getItem('token');
     console.log(rowEl);
     try {
         const response = await fetch(`${url}/${rowId}`, {
-            method: "DELETE"
+            method: "DELETE",
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
         });
 
         if (!response.ok) {
@@ -19,6 +23,7 @@ async function deleteData(event) {
         if (rowEl) {
             rowEl.remove();
         }
+        alert("meny är raderad..");
     } catch (error) {
         console.error("det går inte att radera data:", error);
     }

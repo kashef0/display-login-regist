@@ -29,7 +29,7 @@ export async function login_code(event) {
         localStorage.setItem('token', data.token);
         localStorage.setItem('username', username);
         showProtectedContent();
-        
+        window.location.href = "/home.html";
 
     } catch (error) {
 
@@ -46,8 +46,8 @@ window.addEventListener('load', showProtectedContent);
 document.getElementById('logoutBtn').addEventListener('click', () => {
     // anropa logut fuction
     logOut_code();
-    // Redirect user to login page
-    window.location.href = "/src/pages/login.html";
+
+
 });
 
 toggleMenu();

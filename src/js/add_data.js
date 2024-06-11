@@ -7,7 +7,7 @@ const url = "https://backend-baserad-webbutveckling-2.onrender.com/api/workexper
 async function addData(event) {
     event.preventDefault();
     
-    
+    const token = localStorage.getItem('token');
     const company_name = document.getElementById('company_name').value;
     const job_title = document.getElementById('job_title').value;
     const location = document.getElementById('location').value;
@@ -82,7 +82,8 @@ async function addData(event) {
             const response = await fetch(url, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    'Authorization': `Bearer ${token}`
                 },
                 body: JSON.stringify(postData)
             });
@@ -96,8 +97,7 @@ async function addData(event) {
             
     
             const responseData = await response.json();
-            console.log(responseData);
-    
+            alert("du har lagt till nytt jobb");
             // Uppdatera och visa data efter tilläggning av ny data
             getData();
             // Rensa formuläret

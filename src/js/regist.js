@@ -11,7 +11,7 @@ export async function regist_code(event) {
     const username = document.getElementById('name').value;
     const email = document.getElementById('e-mail').value;
     const password = document.getElementById('passwords').value;
-    
+    const token = localStorage.getItem('token');
     const error = document.getElementById("error-message");
     if (password.length < 6) {
         error.innerHTML = "Lösenordet måste vara minst 6 tecken långt";
@@ -24,7 +24,8 @@ export async function regist_code(event) {
         const response = await fetch(REGISTER_URL, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify({ username, email, password })
         });
