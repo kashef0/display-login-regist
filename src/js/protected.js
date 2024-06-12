@@ -5,7 +5,6 @@ import { addData } from './add_data.js';
 
 // Visa skyddat innehåll om användaren är inloggad
 export function showProtectedContent() {
-    const messageEL = document.getElementById("loadingMessage");
     const username = localStorage.getItem('username');
     const testEl = document.getElementById("test");
     const form = document.getElementById('add_data');
@@ -38,7 +37,7 @@ export function showProtectedContent() {
                     console.error("Form element med id 'add_data' inte hittades.");
                 }
                 // window.location.href = "/home.html";
-                messageEL.style.display = "block";
+                
                 return;
             })
             .catch(error => {

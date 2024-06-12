@@ -4,7 +4,7 @@ const dataShow = document.getElementById("created_list");
 const url = "https://kmoment04-backend.onrender.com/api/company";
 
 async function fetchDataShow() {
-    const dataLoading = document.getElementById("skyddad");
+    const dataLoading = document.getElementById("loadingMessage");
     dataLoading.style.display = "block";
     try {
         const response = await fetch(url, {
