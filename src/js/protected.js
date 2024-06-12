@@ -1,11 +1,11 @@
 "use strict";
-const API_URL = "https://backend-baserad-webbutveckling-17.onrender.com/api";
+const API_URL = "https://kmoment04-backend.onrender.com/api";
 const PROTECTED_URL = `${API_URL}/protected`;
 import { addData } from './add_data.js';
 
 // Visa skyddat innehåll om användaren är inloggad
 export function showProtectedContent() {
-    const messageEL = document.getElementById("skyddad");
+    const messageEL = document.getElementById("loadingMessage");
     const username = localStorage.getItem('username');
     const testEl = document.getElementById("test");
     const form = document.getElementById('add_data');
@@ -18,7 +18,7 @@ export function showProtectedContent() {
     
 
     const token = localStorage.getItem('token');
-    if (token && window.location.pathname !== "/home.html") {
+    if (token) {
         fetch(PROTECTED_URL, {
             method: "GET",
             headers: {
@@ -45,9 +45,8 @@ export function showProtectedContent() {
                 console.error('Error accessing protected content:', error.message);
             });
     } else {
-        console.error("ingen token hittades");
         return;
-    }
+    } 
 
 }
 

@@ -1,8 +1,8 @@
 "use strict";
 import { toggleMenu } from '/src/js/navMenu';
 import { validateForm } from '/src/js/valdite_input';
-const API_URL = "https://backend-baserad-webbutveckling-17.onrender.com/api";
-const REGISTER_URL = `${API_URL}/signup`;
+const API_URL = "https://kmoment04-backend.onrender.com/api";
+const REGISTER_URL = `${API_URL}/user/register`;
 // Registrera användare
 const regist = document.getElementById('register-form');
 regist.addEventListener('submit', regist_code);

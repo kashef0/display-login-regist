@@ -1,6 +1,6 @@
 "use strict";
 
-const url = "https://backend-baserad-webbutveckling-2.onrender.com/api/workexperience";
+const url = "https://kmoment04-backend.onrender.com/api/company";
 
 
 // Funktion för att lägga till ny data

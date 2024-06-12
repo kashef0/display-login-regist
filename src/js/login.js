@@ -3,8 +3,8 @@ import { showProtectedContent } from './protected.js';
 import { logOut_code } from './logOut.js';
 import { toggleMenu } from './navMenu.js';
 import { validateForm } from './valdite_input.js';
-const API_URL = "https://backend-baserad-webbutveckling-17.onrender.com/api";
-const LOGIN_URL = `${API_URL}/login`;
+const API_URL = "https://kmoment04-backend.onrender.com/api";
+const LOGIN_URL = `${API_URL}/user/login`;
 const login_site = document.getElementById('loginForm');
 login_site.addEventListener('submit', login_code);
 export async function login_code(event) {

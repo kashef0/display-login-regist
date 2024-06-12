@@ -1,12 +1,12 @@
 
-const url = "https://backend-baserad-webbutveckling-2.onrender.com/api/workexperience";
+const url = "https://kmoment04-backend.onrender.com/api/company";
+
 // funktion för att radera en rad data
 async function deleteData(event) {
     const button = event.target;
     const rowId = button.dataset.rowId;                
     const rowEl = document.getElementById(`row-${rowId}`);
     const token = localStorage.getItem('token');
-    console.log(rowEl);
     try {
         const response = await fetch(`${url}/${rowId}`, {
             method: "DELETE",
@@ -23,7 +23,7 @@ async function deleteData(event) {
         if (rowEl) {
             rowEl.remove();
         }
-        alert("meny är raderad..");
+        alert("jobbet är raderad..");
     } catch (error) {
         console.error("det går inte att radera data:", error);
     }
